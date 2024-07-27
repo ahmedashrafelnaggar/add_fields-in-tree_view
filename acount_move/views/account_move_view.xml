@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_move_line_tree_inherit" model="ir.ui.view">
+        <field name="name">account.move.line.tree.inherit</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_move_line_tree_grouped_partner"/>
+        <field name="arch" type="xml">
+
+            <field name="name" position="after">
+                <field name="quantity" optional="1"/>
+                <field name="price_unit" optional="1"/>
+            </field>
+
+            <field name="analytic_distribution" position="after">
+                <field name="price_subtotal" optional="1" />
+            </field>
+        </field>
+    </record>
+</odoo>
